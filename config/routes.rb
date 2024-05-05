@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/events" => "events#index"
+  post "/events" => "events#create"
+  get "/events/:id" => "events#show"
+  patch "/events/:id" => "events#update"
+  delete "/events/:id" => "events#destroy"
+
+  post "/users" => "users#create"
 end
