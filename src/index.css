@@ -1,0 +1,246 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  padding: 0;
+ 
+
+
+
+}
+
+.container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  
+}
+
+
+
+.container {
+  
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-right: 15px; /* Add some space between containers */
+  margin-top: 50px;
+  margin-bottom: 15px;;
+  display: inline-block; /* Display containers inline */
+  width: 300px;
+
+}
+
+.container:last-child {
+  margin: 10px; /* Remove margin from the last container */
+}
+
+.team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+
+
+
+.team {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px; /* Add some space between containers */
+  margin-top: 10px;
+  width: 250px;
+  display: inline-block; /* Display containers inline */
+  
+
+}
+
+
+.container2 {
+  font-size: 12px;
+
+}
+
+.container3 {
+  font-size: 12px;
+
+}
+.container-wrapper1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+
+}
+.container5 {
+  
+
+}
+
+.container-wrapper4 {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+
+  
+}
+
+.signup-form {
+  width: 100%;/* Adjust the width of the signup form as needed */
+  padding: 10px; /* Add padding for spacing */
+  /* Add border for visual separation */
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  display: block;
+  width: 95%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  margin: 0.5em 0;
+}
+
+.signup-form button {
+ margin-left: 25%;
+  width: 50%; /* Make the button fill the entire width of the form */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.container-wrapper3 {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+
+  
+}
+
+.login-form {
+  width: 100%;/* Adjust the width of the signup form as needed */
+  padding: 10px; /* Add padding for spacing */
+
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  display: block;
+  width: 95%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  margin: 0.5em 0;
+}
+
+.login-form button {
+ margin-left: 25%;
+  width: 50%; /* Make the button fill the entire width of the form */
+  padding: 10px; /* Add padding for spacing */
+}
+
+
+
+.sidebar {
+  font-family: system-ui;
+  font-size: 18px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px; /* Adjust the width as needed */
+  background-color: #C9082A;
+  padding-top: 60px; /* Adjust as needed */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar li a:hover {
+  padding: 0.8em;
+  border-radius: 0.5em;
+  background-color: white;
+  color: #17408B;
+}
+
+header {
+  margin-left: 100px; /* Ensure content does not overlap sidebar */
+}
+
+
+footer {
+  /* Initially hide the footer */
+ 
+  
+ 
+  background-color: #191970;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+main {
+  /* max-width: 50em;
+  padding: 0.0em; */
+  /* margin: 0 auto; */
+  min-height: 100vh;
+  margin-left: 200px; /* Ensure content does not overlap sidebar */
+  
+  padding: 20px;
+  
+
+}
+
+
+
+button {
+  padding: 1em;
+  font-size: 1em;
+  background-color: #17408B;
+  color: white;
+
+  border: 2px solid transparent;
+  border-radius: 0.20em;
+
+}
+
+button:hover {
+  background-color: white;
+  color: #17408B;
+}
+
+
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+}
+
+@media (max-width: 576px) {
+  /* Styles for screens up to 576px wide */
+}
