@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+User.create!(name: "andrea", email: "andrea@example.com", password: "password")
+Event.create!(name: "game", description: "123", address: "123 main st ")
+Event.create!(name: "game1", description: "123", address: "123 main st ")
+Event.create!(name: "game2", description: "123", address: "123 main st ")
+Favorite.create!(event_id: 1, user_id: 1)
+Favorite.create!(event_id: 3, user_id: 1)

@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
-    render :index
+    response = HTTP
+      .headers("Authorization" => ENV["BALL_DONT_LIE_API_KEY"])
+      .get("https://api.balldontlie.io/v1/games?seasons[]=2023&postseason=true&per_page=100")
+    data = response.parse
+    render json: data["data"]
   end
 
   def create
@@ -38,7 +41,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event = Event.find_by(id: params[:id])
-    event.destroy
+    @event.destroy
     render json: { message: "Event destroyed" }
   end
 end

@@ -13,5 +13,13 @@ Rails.application.routes.draw do
   patch "/events/:id" => "events#update"
   delete "/events/:id" => "events#destroy"
 
+  get "/teams" => "teams#index"
+  get "/teams/:id" => "teams#show"
+
+  get "/players" => "players#index"
+
+  get "/favorites" => "favorites#index"
+
   post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end

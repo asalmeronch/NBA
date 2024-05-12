@@ -6,13 +6,13 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal Event.count, data.lenght
+    assert_equal Event.count, data.length
   end
 
   test "create" do
     assert_difference "Event.count", 1 do
-      post "/events.json", params: { name: "Thunder vs Pelicans ", description: "Playoffs game", address: "100 W Reno Ave, Oklahoma City, OK 73102", image_url: "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/okc-nop/1200x628.png", start_time:, end_time: }
-      assert_response
+      post "/events.json", params: { name: "Thunder vs Pelicans ", description: "Playoffs game", address: "100 W Reno Ave, Oklahoma City, OK 73102", image_url: "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/okc-nop/1200x628.png", start_time: Time.now, end_time: Time.now }
+      assert_response 200
     end
   end
 
@@ -21,7 +21,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "description", "address", "image_url", "start_time", "end_time", "created_at", "updated_at"].data.keys
+    assert_equal ["id", "name", "description", "address", "image_url", "start_time", "end_time", "created_at", "updated_at"], data.keys
   end
 
   test "update" do
@@ -30,12 +30,13 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
+
     assert_equal "Update address", data["address"]
   end
 
   test "destroy" do
     assert_difference "Event.count", -1 do
-      delete "/events/#{Event.firts.id}.json"
+      delete "/events/#{Event.first.id}.json"
       assert_response 200
     end
   end
